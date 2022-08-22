@@ -1,11 +1,11 @@
-# Cobra Bench
+# Viper Bench
 
-Cobra bench is a component of 
+Viper bench is a component of 
 the [Viper]() project.
 It includes benchmarks to generate histories for 
 [Viper](). 
 
-This tutorial introduces how to build Cobra bench and run it with [TiDB](https://en.pingcap.com/).
+This tutorial introduces how to build Viper bench and run it with [TiDB](https://en.pingcap.com/).
 
 The following commands have been tested under Ubuntu 20.04.
 
@@ -13,7 +13,7 @@ Deploy a database cluster
 ---
 You may deploy a TiDB cluster following the description in [production-deployment-using-tiup](https://docs.pingcap.com/tidb/dev/production-deployment-using-tiup).
 
-Build Cobra bench
+Build Viper bench
 ---
 Install jdk11
 
@@ -49,12 +49,11 @@ Make sure that it exists before running the test:
 The history will be stored in the folder `~/viper` by default. You may customize it in `config.yaml` by setting 
 `COBRA_FD`.
 
-You can specify workload parameters in Cobra's config file (`config.yaml` in the above case).
-See [Cobra bench configuration](#config) for more information.
+You can specify workload parameters in the config file `config.yaml`.
 
 ---
 
-Cobra bench uses a config file (for example, `config.yaml`) to specify parameters for an experiment.
+Viper bench uses a config file (for example, `config.yaml`) to specify parameters for an experiment.
 Here are the important parameters and their possible values:
 
 | parameters  | meaning and values                                                                                                                       | 
