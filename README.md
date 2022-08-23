@@ -64,9 +64,9 @@ Here are the important parameters and their possible values:
 
 | parameters  | meaning and values                                                                                                                       | 
 |---|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| `LIB_TYPE`  | which database library is used by clients (which database to connect); `1` for Google Datastore, `2` for RocksDB, and `3` for PostgreSQL |
+| `LIB_TYPE`  | which database library is used by clients (which database to connect). Only TiDB is supported here. |
 | `BENCH_TYPE`  | the benchmark to run; `0` for V-BlindW, `1` for C-TPCC, `2` for V-RANGE, `3` for C-RUBiS, and `4` for C-Twitter                           |
-| `DB_URL`  | the ip address of the remote database;                               |
+| `DB_URL`  | the databse URL of the remote database;                               |
 |`TXN_NUM`| the size of the workload (number of transactions); should be an integer                                                                  |
 |`THREAD_NUM`| the number of clients; should be an integer                                                                                              |
 
