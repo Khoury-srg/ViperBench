@@ -12,11 +12,11 @@ N4=db-instance-4
 
 for i in {1..20}
  do
-    for j in {2..4}
-    do
-      ssh "db-instance-$j" "sudo service ntp stop"
-      ssh "db-instance-$j" "sudo ntpdate pool.ntp.org"
-    done
+    # for j in {2..4}
+    # do
+    #   ssh "db-instance-$j" "sudo service ntp stop"
+    #   ssh "db-instance-$j" "sudo ntpdate pool.ntp.org"
+    # done
 
     TIME_LIMIT=`expr $i \* 10`
     lein run test -w $WORKLOAD --concurrency $CONCURRENCY --isolation snapshot-isolation --existing-tidb  \
