@@ -18,8 +18,8 @@ LOCAL_LOG: true
 LOCAL_REMOTE_LOG: false
 CLOUD_LOG: false
 SIGN_DATA: false
-RESULT_FILE_NAME: <YOUR_RESULT_FILE_PATH>
-COBRA_FD: <YOUR_LOG_DIR>
+RESULT_FILE_NAME: /tmp/viper/result.txt
+COBRA_FD: /tmp/viper/
 
 # ------------------ RPC related --------------------
 SERVER_HOST: ye-cheng.duckdns.org
