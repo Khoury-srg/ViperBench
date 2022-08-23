@@ -46,7 +46,9 @@ TIDB_USERNAME: root
 TIDB_DATABASE_NAME: mys
 ```
 
-Now you can run a simple test over the database `mys`. 
+Run the benchmark
+---
+Now you can run a benchmark over the database `mys`. 
 Make sure that it exists before running the test:
 :
 
