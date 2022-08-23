@@ -71,3 +71,6 @@ Here are the important parameters and their possible values:
 |`THREAD_NUM`| the number of clients; should be an integer                                                                                              |
 
 
+
+---
+If you want to generate Elle-comptaible histories to compare with `Elle`, please refer to `tidb_append/README.md`.

@@ -1,6 +1,6 @@
 # TiDB test based on [Jepsen](https://github.com/jepsen-io/jepsen/blob/main/doc/tutorial/index.md)
 
-This is a component we use to generate histories of TiDB. It generates random transactions, distribute them to databases and collect the responses to form histories. We use it in the paper [Viper: a fast snapshot isolation checker]() for comparason with Elle. The workload consists of read and append operations. [:r 1 [3,4]] means a read operation reads the value [3, 4] of key 1. [:append 1 2] represents that an append operation appends a value 2 to the existing value of key 1.
+This is a component we use to generate Elle-compatible histories of TiDB. It generates random transactions, distribute them to databases and collect the responses to form histories. We use it in the paper [Viper: a fast snapshot isolation checker]() for comparason with Elle. The workload consists of read and append operations. [:r 1 [3,4]] means a read operation reads the value [3, 4] of key 1. [:append 1 2] represents that an append operation appends a value 2 to the existing value of key 1.
 
 ## Usage
 ### Step 1: Deploy database cluster
