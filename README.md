@@ -29,6 +29,12 @@ Compile the code:
 
 Configure parameters
 ---
+Modify `COBRA_FD` and `RESULT_FILE_NAME`. The former is the directory you want to store histories in and the latter the full path of the result file, which shows some simple statistics of the run. Here is an example:
+```bash
+RESULT_FILE_NAME: /viper/cheng/result.txt
+COBRA_FD: /viper/cheng/
+```
+
 Modify the `TIDB_PASSWORD`, `TIDB_DB_URLS`, `TIDB_PORTS`, `TIDB_USERNAME`, `TIDB_DATABASE_NAME` in 
 `config.yaml`. Here is an example:
 

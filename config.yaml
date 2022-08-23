@@ -18,13 +18,8 @@ LOCAL_LOG: true
 LOCAL_REMOTE_LOG: false
 CLOUD_LOG: false
 SIGN_DATA: false
-# RESULT_FILE_NAME: /home/windkl/result.txt
-#COBRA_FD_LOG: /home/windkl/cobra/log
-RESULT_FILE_NAME: /home/windkl/viper/cheng/result.txt
-COBRA_FD: /home/windkl/viper/cheng/
-#COBRA_FD_LOG: /home/windkl/cobra/cheng/log
-#COBRA_JEPSEN_LOG: /home/windkl/cobra/cheng/jepsen
-#LATENCY_FOLDER: /home/windkl/cobra/cheng/latency
+RESULT_FILE_NAME: <YOUR_RESULT_FILE_PATH>
+COBRA_FD: <YOUR_LOG_DIR>
 
 # ------------------ RPC related --------------------
 SERVER_HOST: ye-cheng.duckdns.org
