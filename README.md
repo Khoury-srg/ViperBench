@@ -54,7 +54,7 @@ Make sure that it exists before running the test:
 
     $ java -ea -jar target/txnTest-1-jar-with-dependencies.jar local config.yaml
 
-The history will be stored in the folder `~/viper` by default. You may customize it in `config.yaml` by setting 
+The history will be stored in the folder `/tmp/viper` by default. You may customize it in `config.yaml` by setting 
 `COBRA_FD`.
 
 You can specify workload parameters in the config file `config.yaml`.
