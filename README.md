@@ -1,7 +1,7 @@
 # Viper Bench
 
-Viper bench is a component of 
-the Viper project.
+*Viper: A Fast Snapshot Isolation Checker* is a research paper studying checking snapshot isolation of black-box databases. Viper bench is a component of 
+the Viper project. 
 It includes benchmarks to generate histories for 
 Viper. 
 
