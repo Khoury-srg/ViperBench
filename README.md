@@ -9,12 +9,12 @@ This tutorial introduces how to build Viper bench and run it with [TiDB](https:/
 
 The following commands have been tested under Ubuntu 20.04.
 
-Deploy a database cluster
----
+## Deploy a database cluster
+
 You may deploy a TiDB cluster following the description in [production-deployment-using-tiup](https://docs.pingcap.com/tidb/dev/production-deployment-using-tiup).
 
-Build Viper bench
----
+## Build Viper bench
+
 Install jdk11
 
     $ sudo apt install openjdk-11-jdk
@@ -27,14 +27,23 @@ Compile the code:
 
     $ mvn install
 
-Configure parameters
----
+## Configure benchmark parameters
+
+You may use the config files we provide, e.g. `config_BlindW_RW.yaml`, or customize the parameters in the `config.yaml` by yourself. 
+
+### Use existing config files
+We provided the following config files: `config_BlindW_RM.yaml`, `config_BlindW-RW.yaml`, `config_Range_IDH.yaml`, `config_Range_RQH.yaml`, `config_rubis.yaml`, `config_tpcc.yaml`, `config_twitter.yaml`, `config_V-Range-B.yaml`. Each of them corresponds to a benchmark in the Figure 10 of the paper. To generate histories for Figure 8, please use `config_BlindW_RM.yaml` and change the value of `TXN_NUM`.
+
+### Customize parameters
 Modify `COBRA_FD` and `RESULT_FILE_NAME`. The former is the directory you want to store histories in and the latter the full path of the result file, which shows some simple statistics of the run. Here is an example:
 ```bash
-RESULT_FILE_NAME: /viper/cheng/result.txt
-COBRA_FD: /viper/cheng/
+RESULT_FILE_NAME: /viper/result.txt
+COBRA_FD: /viper/
 ```
 
+See [Viper bench configuration](#config) for how to update `config.yaml` and specify workload parameters.
+
+## Configure database parameters
 Modify the `TIDB_PASSWORD`, `TIDB_DB_URLS`, `TIDB_PORTS`, `TIDB_USERNAME`, `TIDB_DATABASE_NAME` in 
 `config.yaml`. Here is an example:
 
@@ -46,8 +55,7 @@ TIDB_USERNAME: root
 TIDB_DATABASE_NAME: mys
 ```
 
-Run the benchmark
----
+## Run the benchmark
 Now you can run a benchmark over the database `mys`. 
 Make sure that it exists before running the test:
 :
@@ -59,6 +67,7 @@ The history will be stored in the folder `/tmp/viper` by default. You may custom
 
 You can specify workload parameters in the config file `config.yaml`.
 
+<a name='config' /> Viper bench configuration
 ---
 
 Viper bench uses a config file (for example, `config.yaml`) to specify parameters for an experiment.

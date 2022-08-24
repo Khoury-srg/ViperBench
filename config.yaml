@@ -17,6 +17,7 @@ LOCAL_LOG: true
 LOCAL_REMOTE_LOG: false
 CLOUD_LOG: false
 SIGN_DATA: false
+
 RESULT_FILE_NAME: /tmp/viper/result.txt
 COBRA_FD: /tmp/viper/
 
@@ -79,18 +80,11 @@ YUGABYTE_USERNAME: yugabyte
 YUGABYTE_DATABASE_NAME: yugabyte
 
 # ------------------- TiDB related----------------
-TIDB_PASSWORD: "123"
-TIDB_DB_URLS: ["34.185.93.160", "96.74.141.161"]
-TIDB_PORTS: [4000, 4000]
+TIDB_PASSWORD: ""
+TIDB_DB_URLS: [""]
+TIDB_PORTS: [4000]
 TIDB_USERNAME: root
 TIDB_DATABASE_NAME: mys
-
-# ------------------- SQLServer related----------------
-SQLSERVER_PASSWORD: "1314..zJ"
-SQLSERVER_DB_URLS: ["35.203.87.103"]
-SQLSERVER_PORTS: [1433]
-SQLSERVER_USERNAME: "SA"
-SQLSERVER_DATABASE_NAME: "mys"
 
 # ------------------- ISOLATION LEVEL related----------------
 # 1: SERIALIZABLE, 2: SNAPSHOT ISOLATION

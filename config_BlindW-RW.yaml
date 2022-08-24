@@ -3,8 +3,7 @@
 # --------------- DB Server Related -----------------
 # 0-chengKV, 1-google, 2-rocks, 3-postgres, 5-Tapir, 6-CockroachDB, 7-YugaByteDB, 8-TiDB, 9-SQLServer
 LIB_TYPE: 8
-#DB_URL: "jdbc:postgresql://172.31.31.90:5432/testdb"  # RocksDB
-#DB_URL: "jdbc:postgresql://127.0.0.1:5433/yugabyte?user=yugabyte&password=yugabyte"  # YugaByteDB
+
 DB_URL: "jdbc:mysql://34.152.1.236:4000/mys"
 
 # ---------------- Client library -------------------
