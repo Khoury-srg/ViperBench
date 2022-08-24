@@ -1,9 +1,9 @@
 # Viper Bench
 
 Viper bench is a component of 
-the [Viper]() project.
+the Viper project.
 It includes benchmarks to generate histories for 
-[Viper](). 
+Viper. 
 
 This tutorial introduces how to build Viper bench and run it with [TiDB](https://en.pingcap.com/).
 
@@ -64,8 +64,6 @@ Make sure that it exists before running the test:
 
 The history will be stored in the folder `/tmp/viper` by default. You may customize it in `config.yaml` by setting 
 `COBRA_FD`.
-
-You can specify workload parameters in the config file `config.yaml`.
 
 <a name='config' /> Viper bench configuration
 ---
