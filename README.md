@@ -1,11 +1,24 @@
 # Viper Bench
 
-*Viper: A Fast Snapshot Isolation Checker* is a research paper studying checking snapshot isolation of black-box databases. Viper bench is a component of 
-the Viper project. 
-It includes benchmarks to generate histories for 
-Viper. 
+*Viper: A Fast Snapshot Isolation Checker* is a research paper studying checking snapshot isolation of black-box databases. Viper bench is a component of the Viper project. 
+It includes benchmarks to generate histories for Viper. 
 
-This tutorial introduces how to build Viper bench and run it with [TiDB](https://en.pingcap.com/).
+
+This tutorial mainly introduces how to build `Viper` bench and run it with [TiDB](https://en.pingcap.com/).
+
+## Project organization
+- src/main/java: TiDB's Viper history collector.
+    - bench: the benchmarks used in the paper.
+    - kv_interface: functions for interacting with databases.
+    - kvstore/exceptions: user-defined exceptions.
+    - main: the main function, default configurations, logger and profiler. 
+- tidb_append/src/jepsen: TiDB's Jepsen history collector.
+    - drivers: the main program.
+    - tidb: database-specific modules.
+        - db.clj: setup-related information of the database cluster.
+        - client.clj: functions for interacting with databases.
+        - workloads/append.clj: defines the append workload and the operations of the workload.
+
 
 The following commands have been tested under Ubuntu 20.04.
 
