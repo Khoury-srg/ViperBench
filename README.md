@@ -58,7 +58,7 @@ See [Viper bench configuration](#config) for how to update `config.yaml` and spe
 
 ## Configure database parameters
 Modify the `TIDB_PASSWORD`, `TIDB_DB_URLS`, `TIDB_PORTS`, `TIDB_USERNAME`, `TIDB_DATABASE_NAME` in 
-`config.yaml`. Here is an example:
+`config.yaml`. Here is an example below. Note that the database name is hardcoded.
 
 ```bash
 TIDB_PASSWORD: "123"
