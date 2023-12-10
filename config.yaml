@@ -1,10 +1,11 @@
 # Configs of everything
 ---
 # --------------- DB Server Related -----------------
-# 0-chengKV, 1-google, 2-rocks, 3-postgres, 5-Tapir, 6-CockroachDB, 7-YugaByteDB, 8-TiDB, 9-SQLServer, 10-H2
+# 0-chengKV, 1-google, 2-rocks, 3-postgres, 5-Tapir, 6-CockroachDB,
+# 7-YugaByteDB, 8-TiDB, 9-SQLServer, 10-H2, 11-PostgreSQL
 LIB_TYPE: 3
 
-DB_URL: "jdbc:mysql://127.0.0.1:5432/postgres"
+DB_URL: "jdbc:mysql://34.152.1.236:4000/mys"
 
 # ---------------- Client library -------------------
 USE_INSTRUMENT: true  # ??
@@ -18,8 +19,8 @@ LOCAL_REMOTE_LOG: false
 CLOUD_LOG: false
 SIGN_DATA: false
 
-RESULT_FILE_NAME: /tmp/viper/result.txt
-COBRA_FD: /tmp/viper/
+RESULT_FILE_NAME: /home/windkl/viper_logs/result.txt
+COBRA_FD: /home/windkl/viper_logs/
 # ------------------ RPC related --------------------
 SERVER_HOST: ye-cheng.duckdns.org
 # SERVER_HOST: 172.17.0.1
@@ -37,7 +38,7 @@ SKIP_TESTING: false
 DONT_RECORD_LOADING: true
 REDIS_ADDRESS: "redis://10.200.205.118/0"
 
-TXN_NUM: 1000
+TXN_NUM: 8000
 THREAD_NUM: 24
 CLIENT_NUM: 1
 # slow run: sleep this amount of milliseconds after sending every THROUGHPUT_PER_WAIT transaction
@@ -56,14 +57,14 @@ OP_PER_CHENGTXN: 8
 # ------------- chengTxn/YCSBT related --------------
 SEED: 123123123
 NUM_KEYS: 10000
-RATIO_INSERT: 20
+RATIO_INSERT: 0
 #RATIO_RANGEINSERT: 0
-RATIO_READ: 20
-RATIO_UPDATE: 20
-RATIO_DELETE: 20
+RATIO_READ: 50
+RATIO_UPDATE: 50
+RATIO_DELETE: 0
 #RATIO_RANGEDELETE: 0
 RATIO_RMW: 0
-RATIO_RANGE: 20
+RATIO_RANGE: 0
 # --------------------TPC-C related------------------
 WAREHOUSE_NUM: 1
 # ---------------------RUBIS related-----------------
@@ -79,39 +80,29 @@ YUGABYTE_USERNAME: yugabyte
 YUGABYTE_DATABASE_NAME: yugabyte
 
 # ------------------- TiDB related----------------
-#TIDB_PASSWORD: ""
-#TIDB_DB_URLS: [""]
-#TIDB_PORTS: [4000]
-#TIDB_USERNAME: root
-#TIDB_DATABASE_NAME: mys
 TIDB_PASSWORD: "viper321"
 TIDB_DB_URLS: ["34.148.93.160", "34.74.141.161", "34.74.141.161"]
 TIDB_PORTS: [4000, 4000, 4000]
 TIDB_USERNAME: root
-TIDB_DATABASE_NAME: 
+TIDB_DATABASE_NAME: mys
 
 # ------------------- PostgreSQL related----------------
 PG_PASSWORD: "password"
-PG_DB_HOSTS: ["localhost"]
+PG_DB_HOSTS: ["127.0.0.1"]
 PG_PORTS: [5432]
 PG_USERNAME: postgres
 PG_DATABASE_NAME: postgres
 
-# ------------------ h2 related -------------------------
-H2_PASSWORD: ""
-H2_DB_URLS: ["34.148.93.160"]
-H2_PORTS: [9092]
-H2_USERNAME: sa
-H2_DATABASE_NAME: test2
-
 # ------------------- ISOLATION LEVEL related----------------
-# 1: SERIALIZABLE, 2: SNAPSHOT ISOLATION
-ISOLATION_LEVEL: 2
+# 1: SERIALIZABLE, 2: SNAPSHOT ISOLATION, 3: REPEATABLE READ, 4: READ COMMITTED, 5: READ UNCOMMITTED
+ISOLATION_LEVEL: 1
 
 # string key or integer key? 0-string, 1-integer
 KEY_TYPE: 1
-
+JSON: 1
 #
 TAG: "normal"
 #TAG: "RM"
 #TAG: "WM"
+# wheter print timestamps in logs
+PRINT_TS: false
